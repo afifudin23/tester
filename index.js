@@ -1,14 +1,22 @@
-const express = require("express");
-const app = express();
-const port = 5000;
+const Hapi = require("@hapi/hapi");
 
-app.get("/testing", (req, res) => {
-    res.send({
-        status: "manteppp",
-        message: "Masukk Pak Ekooo!!"
+const init = async () => {
+    const server = Hapi.server({
+        port: 4000,
+        host: "127.0.0.1"
     });
-});
+    
+    server.route({
+        method: "GET",
+        path: "/testing",
+        handler: (req, h) => h.response({
+            status: "Mantepp",
+            message: "Masukkkk Pak Ekooo!!!"
+        })
+    });
+    
+    await server.start();
+    console.log(`Server is listening on ${server.info.uri}`);
+}
 
-app.listen(port, () => {
-    console.log(`Server is listening on ${port}`);
-})
+init();
