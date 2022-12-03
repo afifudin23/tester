@@ -3,17 +3,23 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
-  "engines": {
-      "node": "14.x"
+  "dependencies": {
+    "@hapi/hapi": "^21.1.0",
+    "mime-db": "^1.52.0"
   },
   "scripts": {
-    "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/afifudin23/tester.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "@hapi/hapi": "^21.1.0"
-  }
+  "bugs": {
+    "url": "https://github.com/afifudin23/tester/issues"
+  },
+  "homepage": "https://github.com/afifudin23/tester#readme"
 }
