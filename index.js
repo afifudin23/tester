@@ -11,7 +11,8 @@ const init = async () => {
         path: "/testing",
         handler: (req, h) => h.response({
             status: "Mantepp",
-            message: "Masukkkk Pak Ekooo!!!"
+            message: "Masukkkk Pak Ekooo!!!",
+            framework: "Hapi Js"
         })
     });
     
